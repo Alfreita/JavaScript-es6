@@ -55,3 +55,26 @@ function experiencia(anos){
 var anosDeExperiencia = 7;
 experiencia(anosDeExperiencia);
 /********************************************************************************************************************************* */
+/* Desafio 5 */
+function exibeHabilidade(usuarios){
+    for (usuario of usuarios) {
+        console.log(
+          "O " +
+            usuario.nome +
+            " possui as habilidades: " +
+            usuario.habilidades.join(", ")
+        );
+      }
+}
+var usuarios =[
+{
+    nome:"Diego",
+    habilidades:["JavaScript","ReactJs","Redux"]
+},
+{
+    nome:"Gabriel",
+    habilidades:["VueJS","Ruby on Rails","Elixir"]
+}
+];
+
+exibeHabilidade(usuarios);
