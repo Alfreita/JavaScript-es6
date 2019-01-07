@@ -39,3 +39,19 @@ function temHabilidade(skills){
 var skills= ["javaScript","ReactJS","ReactNativeJS"];
 temHabilidade(skills);
 /********************************************************************************************************************************** */
+/* Desafio 4 */
+
+function experiencia(anos){
+    if (anos <=1)
+        return ("Iniciante");
+    else if (anos <=3)
+        return ("Intermediario");
+    else if (anos <=6)
+        return ("avançado");
+    else 
+        return ("Jedi Master");
+}
+
+var anosDeExperiencia = 7;
+experiencia(anosDeExperiencia);
+/********************************************************************************************************************************* */
