@@ -6,18 +6,21 @@
 </head>
 <body>
 <div id="app">
-    <input type="text" name="nome" />
-    <button class="botao">Adicionar</button>
+    <ul>
+        <li>Fazer café
+                <a href="#">Excluir</a>
+        </li>
+        <li>Estudar JavaScript
+                <a href="#">Excluir</a>
+        </li>
+        <li>Acessar Comunidade da RocketSeat
+                <a href="#">Excluir</a>
+        </li>
+    </ul>
+    <input type="text" placeholder="Digite um TODO"/>
+    <button>Adicionar</button>
 </div>
-<script>
-   var inputElement = document.querySelector('input[name=nome]'); 
-   var btnElement = document.querySelector('button.botao');
-   btnElement.onclick= function(){
-       var text = inputElement.value;
-       alert(text);
-   }
-   console.log(inputElement);
-</script>
+<script src="todos.js"></script>
 
 </body>
 
