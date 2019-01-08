@@ -6,12 +6,12 @@
 </head>
 <body>
 <div id="app">
-    <button onmouseover="mostraAlerta()"> Me pressione</button>
+    <input type="text" name="nome" id="nome"/>
+    <button class="botao">Adicionar</button>
 </div>
 <script>
-    function mostraAlerta(){
-        alert('Botão foi clicado');
-    }
+   var inputElement = document.getElementById("nome");
+   console.log(inputElement);
 </script>
 
 </body>
