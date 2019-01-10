@@ -1,6 +1,6 @@
 var listElement = document.querySelector('#app ul');
 var inputElement = document.querySelector('#app input');
-var inputButton = document.querySelector('#app button');
+var buttonElement = document.querySelector('#app button');
 
 var todos = [
     'Fazer cafe',
@@ -8,7 +8,9 @@ var todos = [
     'Acessar a comunidade da RocketSeat'
 ];
 
-function renderTodos() {
+function renderTodos() {    
+    listElement.innerHTML = '';
+
     for (todo of todos){
         var todoElement = document.createElement('li');
         var todoText = document.createTextNode(todo);
@@ -18,3 +20,12 @@ function renderTodos() {
 }
 
 renderTodos();
+
+function addTodo(){
+    var textTodo = inputElement.value;
+    todos.push(textTodo);
+    inputElement.value ='';
+    renderTodos();
+}
+
+buttonElement.onclick = addTodo;
