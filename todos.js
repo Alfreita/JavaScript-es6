@@ -43,9 +43,12 @@ function addTodo(){
 
 buttonElement.onclick = addTodo;
 
-
 function deleteTodo(pos){
     todos.splice(pos,1);
     inputElement.value = '';
     renderTodos();
+}
+
+function saveToStorage(){
+    localStorage.setItem('list_todos',JASON.stringfy(todos));
 }
