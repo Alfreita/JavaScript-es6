@@ -23,3 +23,38 @@ const find = arr.find(function(item){
     return item === 4;
 });
 console.log(find);
+
+/************************************************************************** 
+ * 
+ * As mesmas funções acima so que com arrow function
+ * 
+***************************************************************************/
+
+const newArr1 = arr.map((item, index) => {
+    return item + index;
+});
+console.log(newArr1);
+
+const sum1 = arr.reduce((total,next) =>{
+    return total+next;
+});
+console.log(sum1);
+
+const filter1 = arr.filter(item =>{
+    return item %  2 === 0;
+});
+console.log(filter1);
+
+const find1 = arr.find(item =>{
+    return item === 4;
+});
+console.log(find1);
+
+const mult = arr.map(item =>{
+    return item * 2;
+});
+console.log(mult);
+
+const teste = () => ({nome:"victor"});
+
+console.log(teste);

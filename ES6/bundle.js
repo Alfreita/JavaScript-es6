@@ -21,3 +21,37 @@ var find = arr.find(function (item) {
   return item === 4;
 });
 console.log(find);
+/************************************************************************** 
+ * 
+ * As mesmas funções acima so que com arrow function
+ * 
+***************************************************************************/
+
+var newArr1 = arr.map(function (item, index) {
+  return item + index;
+});
+console.log(newArr1);
+var sum1 = arr.reduce(function (total, next) {
+  return total + next;
+});
+console.log(sum1);
+var filter1 = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log(filter1);
+var find1 = arr.find(function (item) {
+  return item === 4;
+});
+console.log(find1);
+var mult = arr.map(function (item) {
+  return item * 2;
+});
+console.log(mult);
+
+var teste = function teste() {
+  return {
+    nome: "victor"
+  };
+};
+
+console.log(teste);
