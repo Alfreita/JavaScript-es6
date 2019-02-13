@@ -1,15 +1,27 @@
-import axios from 'axios';
+class App{
+  constructor(){
+    this.repositories =[];
+    this.formEl = document.getElementById('repo-form');
+    this.registerHandler();
+  }
 
-class Api{
+  registerHandler(){
+    this.formEl.onsubmit = event => this.addRepository(event);
+  }
 
-  static async getUserInfo(username){
-      try{
-        const response = await axios.get(`https://api.github.com/users/${username}`);
-        console.log(response);
-      }catch(err){
-        console.warn('Erro na API')
-      }    
+  
+  addRepository(event){
+    event.preventDefault();
+
+    this.repositories.push({
+      name:'RocketSeat',
+      description:'Tire a sua ideia do papel e dê vida à sua startUp.',
+      avatar:'https://avatars0.githubusercontent.com/u/28929274?v=4',
+      html_url:'http:/github.com/rocketseat/rocketseat.com.br',
+    });
+
+    console.log(this.repositories);
   }
 }
 
-Api.getUserInfo('Alfreita')
+new App();
